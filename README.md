@@ -1,6 +1,7 @@
 # RESTfulCRUDDev3l
 RESTful Web Service using Jersey - CRUD resource implemented (template)
-	- uses annotations
+
+	- Uses annotations for configuration
 		- No need for a web.xml
 	- REST Client 
 		- Jersey
@@ -26,15 +27,15 @@ RESTful Web Service using Jersey - CRUD resource implemented (template)
 		- My personal OpenShift server I deploy projects too
 	- CURL Commands to exercise CRUD operations
 		- GET
-			curl http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user
+			- curl http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user
 		- GET
-			curl http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/{id}
+			- curl http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user/{id}
 		- POST
-			curl -X POST http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user -H "Content-Type: application/json" -d '{"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
+			- curl -X POST http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user -H "Content-Type: application/json" -d '{"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
 		- PUT
-			curl -X PUT http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user/{id} -H "Content-Type: application/json" -d '{"id":{id},"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
+			- curl -X PUT http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user/{id} -H "Content-Type: application/json" -d '{"id":{id},"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
 		- DELETE
-			curl -X DELETE http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user/{id}
+			- curl -X DELETE http://services-dev3l.rhcloud.com/RESTfulCRUDDev3l/user/{id}
 
 4. Use Maven to resolve the dependencies and create eclipse dynamic web project and class/project files
 	- mvn eclipse:eclipse -Dwtpversion=2.0
