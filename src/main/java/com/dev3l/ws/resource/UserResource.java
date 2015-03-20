@@ -35,14 +35,14 @@ public class UserResource {
 	}
 
 	@GET
-	// curl http://localhost:8080/HelwohoWebService/user
+	// curl http://localhost:8080/RESTfulCRUDDev3l/user
 	public Response getAll() {
 		return Response.ok().entity(new GenericEntity<List<UserBean>>(userAgent.get()) {}).build();
 	}
 
 	@GET
 	@Path(ResourceConstants.PATH_ELEMENT_ID)
-	// curl http://localhost:8080/HelwohoWebService/user/{id}
+	// curl http://localhost:8080/RESTfulCRUDDev3l/user/{id}
 	public Response get(@PathParam("id") final Long id) {
 		final UserBean userBean = userAgent.get(id);
 
@@ -55,7 +55,7 @@ public class UserResource {
 
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	// curl -X POST http://localhost:8080/HelwohoWebService/user -H "Content-Type: application/json" -d '{"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
+	// curl -X POST http://localhost:8080/RESTfulCRUDDev3l/user -H "Content-Type: application/json" -d '{"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
 	public Response add(final UserBean userBean) {
 		//TODO validation checks here before calling add
 
@@ -69,7 +69,7 @@ public class UserResource {
 	@PUT
 	@Path(ResourceConstants.PATH_ELEMENT_ID)
 	@Consumes(MediaType.APPLICATION_JSON)
-	// curl -X PUT http://localhost:8080/HelwohoWebService/user/{id} -H "Content-Type: application/json" -d '{"id":{id},"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
+	// curl -X PUT http://localhost:8080/RESTfulCRUDDev3l/user/{id} -H "Content-Type: application/json" -d '{"id":{id},"userName":"user_name","email":"email@email.com","status":"AC","password":"password"}'
 	public Response put(final UserBean userBean) {
 		//TODO validation checks here before calling update
 
@@ -78,7 +78,7 @@ public class UserResource {
 
 	@DELETE
 	@Path(ResourceConstants.PATH_ELEMENT_ID)
-	// curl -X DELETE http://localhost:8080/HelwohoWebService/user/{id}
+	// curl -X DELETE http://localhost:8080/RESTfulCRUDDev3l/user/{id}
 	public Response delete(@PathParam(ResourceConstants.PATH_PARAM_ELEMENT_ID) final Long id) {
 		if (!userAgent.delete(id)) {
 			return Response.status(Status.BAD_REQUEST).build();
