@@ -1,11 +1,11 @@
 # RESTfulCRUDDev3l
-RESTful Web Service using Jersey - CRUD resource implemented (template)
+RESTful Web Service using RESTEasy - CRUD resource implemented (template)
 
 	- Uses annotations for configuration
 		- No need for a web.xml
 	- REST Client 
-		- Jersey
-		- com.sun.jersey : v1.19
+		- RESTEasy
+		- org.jboss.resteasy : v3.0.11
 	- Dependency Injection 
 		- Google Guice
 		- com.google.inject : guice : v3.0

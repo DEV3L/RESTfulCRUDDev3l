@@ -14,11 +14,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import com.dev3l.ws.ResourceConstants;
 import com.dev3l.ws.agent.UserAgent;
 import com.dev3l.ws.bean.UserBean;
-import com.sun.jersey.api.client.ClientResponse.Status;
 
 @Path(ResourceConstants.ROOT_PATH_USER)
 @Produces(MediaType.APPLICATION_JSON)
